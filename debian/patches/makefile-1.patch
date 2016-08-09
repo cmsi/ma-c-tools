@@ -5,7 +5,7 @@
 +	make $@ -C src
 --- a/src/Makefile
 +++ b/src/Makefile
-@@ -55,11 +55,17 @@
+@@ -56,11 +56,17 @@
  $(ICON): icon.rc icon.ico
  	windres.exe -i icon.rc -o icon.o
  
@@ -24,39 +24,3 @@
 +	install $(TARGET) $(DESTDIR)/usr/libexec/c-tools
 +
  include Makefile.dep
---- a/src/Makefile.inc
-+++ b/src/Makefile.inc
-@@ -37,21 +37,21 @@
- #ICON   = 
- 
- ### for Linux, debian 6
--#QT4    =  /usr
--#CC     =  g++
--#CFLAGS = -O3 -Wall
--#INCS   = -I/usr/include/stlport -I/usr/include/qt4 -I/usr/X11R6/include
--#LIBS   = -lQtCore -lQtGui -lQtOpenGL -lQtXml -lGLU -lstlport -llapack -lblas
--#ICON   = 
--
--### for Mac
--QT4    =  $(HOME)/Qt-4.8.7
-+QT4    =  /usr
- CC     =  g++
--CFLAGS = -O3 -Wall -static
--INCS   = -I$(QT4)/include -I/usr/X11/include
--LIBS   = -F$(QT4)/lib -L$(QT4)/lib -lQtCore -lQtGui -lQtOpenGL -lQtXml -framework OpenGL -framework CoreFoundation -framework Foundation -framework CoreServices -framework Security -framework ApplicationServices -framework IOKit -framework Cocoa -framework Carbon -lz -llapack -lblas
-+CFLAGS = -O3 -Wall
-+INCS   = -I/usr/include/qt4 -I/usr/X11R6/include
-+LIBS   = -lQtCore -lQtGui -lQtOpenGL -lQtXml -lGLU -llapack -lblas
- ICON   = 
- 
-+### for Mac
-+#QT4    =  $(HOME)/Qt-4.8.7
-+#CC     =  g++
-+#CFLAGS = -O3 -Wall -static
-+#INCS   = -I$(QT4)/include -I/usr/X11/include
-+#LIBS   = -F$(QT4)/lib -L$(QT4)/lib -lQtCore -lQtGui -lQtOpenGL -lQtXml -framework OpenGL -framework CoreFoundation -framework Foundation -framework CoreServices -framework Security -framework ApplicationServices -framework IOKit -framework Cocoa -framework Carbon -lz -llapack -lblas
-+#ICON   =
-+
- #########################################
- ### do not edit lines below
- MOC    = $(QT4)/bin/moc
