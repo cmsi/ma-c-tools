@@ -14,7 +14,7 @@
 +CC     =  g++
 +CFLAGS = -O3 -Wall
 +INCS   = -I/usr/include/qt4 -I/usr/X11R6/include
-+LIBS   = -lQtCore -lQtGui -lQtOpenGL -lQtXml -lGLU -llapack -lblas
++LIBS   = -lQtCore -lQtGui -lQtOpenGL -lQtXml -lGLU -lGL -llapack -lblas
 +ICON   = 
  
  ### for Mac
