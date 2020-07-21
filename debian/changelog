@@ -1,3 +1,10 @@
+c-tools (0.6.2-3) unstable; urgency=low
+
+  * Patch for OpenMX pseudo potential
+  * Qt5 support on Focal
+
+ -- Synge Todo <wistaria@phys.s.u-tokyo.ac.jp>  Tue, 21 Jul 2020 16:04:09 +0900
+
 c-tools (0.6.2-2) unstable; urgency=low
 
   * Fixed Makefile
