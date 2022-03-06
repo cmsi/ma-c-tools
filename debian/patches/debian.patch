@@ -12,9 +12,9 @@
 -#ICON   = 
 +QT4    =  /usr
 +CC     =  g++
-+CFLAGS = -O3 -Wall
-+INCS   = -I/usr/include/qt4 -I/usr/X11R6/include
-+LIBS   = -lQtCore -lQtGui -lQtOpenGL -lQtXml -lGLU -lGL -llapack -lblas
++CFLAGS = -O3 -fPIC -Wall
++INCS   = -I$(shell qmake -query QT_INSTALL_HEADERS) -I/usr/X11R6/include
++LIBS   = -lQt5Core -lQt5Widgets -lQt5Gui -lQt5OpenGL -lQt5Xml -lGLU -lGL -llapack -lblas
 +ICON   = 
  
  ### for Mac
